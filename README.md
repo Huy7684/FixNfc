@@ -1,1 +1,1 @@
-# FixNfc
+Use bash command
