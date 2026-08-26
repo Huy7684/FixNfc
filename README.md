@@ -1,1 +1,2 @@
-Use bash command
+chmod +x nfcfix.sh
+./nfcfix.sh
