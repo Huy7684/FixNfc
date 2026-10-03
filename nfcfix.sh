@@ -367,7 +367,7 @@ def configure_hal_rc_interfaces() -> None:
     relative_path = "hardware/st/nfc/1.2/android.hardware.nfc@1.2-service.st.rc"
     document = documents[relative_path]
     lines = split_lines(document.text)
-    service_re = re.compile(r"^service[ \t]+vendor\.st_nfc_hal_service(?:[ \t]|$)")
+    service_re = re.compile(r"^service[ \t]+\S*nfc_hal_service(?:[ \t]|$)")
     service_indices = [index for index, line in enumerate(lines) if service_re.match(line)]
     if len(service_indices) != 1:
         raise NfcPatchError(
